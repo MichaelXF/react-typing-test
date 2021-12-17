@@ -24,7 +24,7 @@ function App() {
 
   return (
     <ResultsContent.Provider value={resultsValue}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <AppRouter />
       </BrowserRouter>
