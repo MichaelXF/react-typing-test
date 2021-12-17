@@ -1,3 +1,17 @@
+# React Typing Test
+
+Test your typing speed (_WPM_) on this website created using the React library.
+
+_WPM_ - Words per minute.
+
+**[Try the website here.](https://michaelxf.github.io/react-typing-test/build/)**
+
+`https://michaelxf.github.io/react-typing-test/build/`
+
+# License
+
+MIT License.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

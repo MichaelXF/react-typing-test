@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useMemo, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./AppRouter";
+import ScrollToTop from "./components/ScrollToTop";
+
+export const ResultsContent = createContext({
+  results: {
+    wpm: 0,
+    accuracyPercentage: 0,
+    mistakes: 0,
+    words: 0,
+    durationMs: 0,
+    typoWords: [],
+    typoKeys: [],
+  },
+  setResults: () => {},
+});
 
 function App() {
+  var [results, setResults] = useState();
+  var resultsValue = useMemo(() => {
+    return { results, setResults };
+  }, [results]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ResultsContent.Provider value={resultsValue}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <AppRouter />
+      </BrowserRouter>
+    </ResultsContent.Provider>
   );
 }
 
