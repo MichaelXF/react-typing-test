@@ -4,6 +4,8 @@ Test your typing speed (_WPM_) on this website created using the React library.
 
 _WPM_ - Words per minute.
 
+![React Typing Test Results](https://raw.githubusercontent.com/MichaelXF/react-typing-test/master/Typing2.png)
+
 **[Try the website here.](https://michaelxf.github.io/react-typing-test/build/)**
 
 `https://michaelxf.github.io/react-typing-test/build/`
